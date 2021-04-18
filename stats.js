@@ -7,9 +7,11 @@ const stats = (array) => {
 
         array.forEach((element) => {
             allResults.push(element.href);
-            if(element.access === 'ok') {
+
+            if(element.access === 'OK') {
                 active.push(element);
-            }   else if (element.access === 'fail') {
+
+            }   else if (element.access === 'FAIL') {
                     brokenLinks.push(element);
                 }
         });

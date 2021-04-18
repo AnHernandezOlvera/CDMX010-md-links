@@ -16,9 +16,6 @@ async function promptUser () {
         choices: ['Print links', '--validate', '--stats', '--validate & --stats', 'Exit']
     }
     ]);
-    // const command = [answers.route];
-    // const myLinks = mdLinks(path[0]);
-    //console.log(myLinks)
     const command = answers;
     return command;
 
@@ -47,24 +44,6 @@ const nueva = async () => {
                 
             })
         })
-        /* mdLinks(path[0])
-        .then(links => {
-        return linkValidation(links)
-    })
-    .then(linksValidate => {
-        // console.log(linksUp);
-        linksValidate.forEach(link => {
-            if (link.status === 200) {
-                console.log(chalk.white.bgGreen.bold(link.access + ' ' + link.status) + ' ' + chalk.white.bgBlueBright(link.href + ' ' + link.path));
-            }
-            else{
-                console.log(chalk.white.bgRed.bold(link.access + ' ' + link.status) + ' ' + chalk.white.bgBlueBright(link.href + ' ' + link.path));
-            }
-            
-        })
-        
-    })
-    .catch(console.error); */
     
     } else if (answers.command === '--stats') {
         actions.stats = true;
@@ -78,16 +57,6 @@ const nueva = async () => {
         `
             );
         })
-        /* mdLinks(path[0])
-        .then(links => {
-            return linkValidation(links)
-        })
-        .then(linkValidate => {
-            return stats(linkValidate);
-        })
-        .then(linksStats => {
-            console.table(linksStats)
-        }) */
 
     } else if(answers.command === '--validate & --stats') {
         actions.stats = true;
@@ -96,7 +65,7 @@ const nueva = async () => {
         .then(linksAdvanced => {
             console.log(chalk`
             ------------------------ {magenta.bold MD LINKS ADVANCED STATS} ------------------------\n
-            TOTAL: {blue.bold ${linksAdvanced.total} links}, UNIQUE: {yellow.bold ${linksAdvanced.unique} links}, ACTIVE: {green.bold ${linksAdvanced.active} links}, BROKEN: {red.bold ${linksAdvanced.unique} links}
+            TOTAL: {blue.bold ${linksAdvanced.total} links}, UNIQUE: {yellow.bold ${linksAdvanced.unique} links}, ACTIVE: {green.bold ${linksAdvanced.active} links}, BROKEN: {red.bold ${linksAdvanced.broken} links}
             -------------------------------------------------------------------------
         `
             );
@@ -117,22 +86,4 @@ const nueva = async () => {
     }
     
 }
-nueva()
-// console.log(actions)
-/* mdLinks("./some/example.md")
-.then(links => {
-    // => [{ href, text, file }]
-})
-.catch(console.error);
-*/
-/* mdLinks("./some/example.md", { validate: true })
-.then(links => {
-    // => [{ href, text, file, status, ok }]
-})
-.catch(console.error);
-
-mdLinks("./some/dir")
-.then(links => {
-    // => [{ href, text, file }]
-})
-.catch(console.error); */
+nueva();

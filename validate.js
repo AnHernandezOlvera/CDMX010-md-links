@@ -6,11 +6,11 @@ const fetch = require('node-fetch');
             return fetch(link.href)
                 .then(result => {
                     link.status = result.status;
-                    link.access = (result.status == 200) ? 'ok' : 'fail'; 
+                    link.access = (result.status == 200) ? 'OK' : 'FAIL'; 
                 })
                 .catch(error => {
                     link.status = 404;
-                    link.access = 'fail'; 
+                    link.access = 'FAIL'; 
                 })
         });
      Promise.all(allLinksInfo)

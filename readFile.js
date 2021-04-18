@@ -7,8 +7,7 @@ const readFile = (file_path) => {
     fs.readFile(file_path, "utf-8", (err, data) => {
         if (err) {
             reject(new Error('El archivo no se puede leer'));
-            //reject('El archivo no se puede leer');
-            //reject(err.message)
+            
         } else {
             let fileName = path.basename(file_path);
             let links = [];
