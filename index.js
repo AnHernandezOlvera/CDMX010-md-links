@@ -16,6 +16,7 @@ async function promptUser () {
         choices: ['Print links', '--validate', '--stats', '--validate & --stats', 'Exit']
     }
     ]);
+    console.log(answers);
     const command = answers;
     return command;
 
