@@ -1,20 +1,29 @@
 const stats = (array) => {
-    let brokenLinks = [];
-    let uniqueLinks = [];
-    let allResults = [];
+  return new Promise((resolve, reject) => {
+    const brokenLinks = [];
+    const active = [];
+    const allResults = [];
     let countAllResults = {};
+
     array.forEach((element) => {
-        allResults.push(element);
-        if(element.access === 'ok') {
-            uniqueLinks.push(element);
-        } else if (element.access === 'fail') {
-            brokenLinks.push(element);
-        }
+      allResults.push(element.href);
+
+      if (element.access === 'OK') {
+        active.push(element);
+      } else if (element.access === 'FAIL') {
+        brokenLinks.push(element);
+      }
     });
+    const dataArr = new Set(allResults);
+    const uniqueLinks = [...dataArr];
+
     countAllResults = {
-        total: allResults.length,
-        unique: uniqueLinks.length,
-        broken: brokenLinks.length,
-    }
-    return countAllResults;
+      total: allResults.length,
+      unique: uniqueLinks.length,
+      active: active.length,
+      broken: brokenLinks.length,
+    };
+    resolve(countAllResults);
+  });
 };
+module.exports.stats = stats;
