@@ -6,10 +6,12 @@ const answers1 = mock.answers1;
 
 describe('ReadPath must return an absolute path or an error message', () => {
   it('path is relative: ./', () => {
-    expect(readPath.readPath('./')).toContain('/Users/anahi/Documents/laboratoria/CDMX010-md-links/lib/')
+    expect(readPath.readPath('./'))
+      .toContain('/Users/anahi/Documents/laboratoria/CDMX010-md-links/lib/')
   });
   it('path is a file', () => {
-    expect(readPath.readPath('/Users/anahi/Documents/laboratoria/CDMX010-md-links/README.md')).toContain('/Users/anahi/Documents/laboratoria/CDMX010-md-links/README.md')
+    expect(readPath.readPath('/Users/anahi/Documents/laboratoria/CDMX010-md-links/README.md'))
+      .toContain('/Users/anahi/Documents/laboratoria/CDMX010-md-links/README.md')
   });
   it('value is not a path', () => {
     expect(readPath.readPath('Invalid value')).toBe('El valor no corresponde a un directorio o archivo')
