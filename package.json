@@ -1,8 +1,11 @@
 {
   "name": "md-links",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "cli that searches, verifies and generates statistics of links contained in markdown files",
+  "main": "index.js",
+  "bin": "index.js",
   "scripts": {
-    "test": "jest --verbose"
+    "test": "jest"
   },
   "devDependencies": {
     "eslint": "^7.24.0",
@@ -14,5 +17,20 @@
     "inquirer": "^8.0.0",
     "marked": "^2.0.2",
     "node-fetch": "^2.6.1"
-  }
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnHernandezOlvera/CDMX010-md-links.git"
+  },
+  "keywords": ["links", "markdown", "md"],
+  "author": "Anahí Hernández Olvera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnHernandezOlvera/CDMX010-md-links/issues"
+  },
+  "homepage": "https://github.com/AnHernandezOlvera/CDMX010-md-links#readme"
 }

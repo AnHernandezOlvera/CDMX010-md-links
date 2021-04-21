@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /* eslint-disable require-jsdoc */
 /* eslint-disable max-len */
 const chalk = require('chalk');
