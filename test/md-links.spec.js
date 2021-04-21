@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-const mdLinks = require('../mdLinks.js');
+const mdLinks = require('../lib/mdLinks.js');
 const readPath = require('../lib/readPath.js');
 const findFiles = require('../lib/findFiles.js');
 const mock = require('../test/mock.js');
