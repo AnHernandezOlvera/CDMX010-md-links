@@ -1,9 +1,12 @@
 {
   "name": "md-links-validate-statistics",
-  "version": "1.1.1",
+  "version": "1.1.4",
   "description": "cli that searches, validate and generates statistics of links contained in markdown files",
-  "main": "index.js",
-  "bin": "index.js",
+  "main": "./index.js",
+  "bin": "./index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "jest"
   },
@@ -24,11 +27,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AnHernandezOlvera/CDMX010-md-links.git"
+    "url": "https://github.com/AnHernandezOlvera/CDMX010-md-links.git"
   },
   "keywords": ["links", "markdown", "md"],
   "author": "Anahí Hernández Olvera",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/AnHernandezOlvera/CDMX010-md-links/issues"
   },
