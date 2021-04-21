@@ -1,7 +1,7 @@
 {
-  "name": "md-links",
+  "name": "md-links-validate-statistics",
   "version": "1.0.0",
-  "description": "cli that searches, verifies and generates statistics of links contained in markdown files",
+  "description": "cli that searches, validate and generates statistics of links contained in markdown files",
   "main": "index.js",
   "bin": "index.js",
   "scripts": {
