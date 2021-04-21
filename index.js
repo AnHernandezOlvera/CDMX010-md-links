@@ -5,7 +5,7 @@
 const chalk = require('chalk');
 const inquirer = require('inquirer');
 
-const {mdLinks} = require('./mdLinks.js');
+const {mdLinks} = require('./lib/mdLinks.js');
 
 
 async function promptUser() {
